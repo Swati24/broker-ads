@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ad_request_id: 1
+  name: MyString
+  lifetime_budget: 1
+  optimization_goal: MyString
+  billing_event: MyString
+  targeting: MyText
+  ad_campaign_id: 1
+  status: MyString
+  bid_amount: 1
+  end_time: 2018-02-22 19:29:49
+  promoted_object: MyText
+
+two:
+  ad_request_id: 1
+  name: MyString
+  lifetime_budget: 1
+  optimization_goal: MyString
+  billing_event: MyString
+  targeting: MyText
+  ad_campaign_id: 1
+  status: MyString
+  bid_amount: 1
+  end_time: 2018-02-22 19:29:49
+  promoted_object: MyText

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  broker_uuid: MyString
+  response: MyText
+  name: MyString
+  location_details: MyText
+  image_urls: MyText
+
+two:
+  broker_uuid: MyString
+  response: MyText
+  name: MyString
+  location_details: MyText
+  image_urls: MyText

@@ -6,6 +6,10 @@ class FacebookAds::Base
     Rest::Client.post(url, query)
   end
 
+  def get
+    Rest::Client.get(url, payload)
+  end
+
   def payload
     { "access_token": "EAASZAlYctZB1ABAAlnZC1GZCLkPzRv1H0pz5yyC9QZBZBRfctDYB7EFUzvHSCbSWPDAtwZCFmGmomuQyhi9Ja2Vj3xog6ZCKpH3dmj8Qguv2QsD5esrEbmJz6bWZCWuR02qwIJmgZB9zel5zWzwMmsypc8FBob4hoWGXvOgeSMX7QdrQZDZD" }
   end
