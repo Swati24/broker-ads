@@ -1,8 +1,8 @@
-class AdCampaign < ActiveRecord::Base
-
+class AdCampaign < AdBase
+  self.table_name = 'ad_campaigns'
   belongs_to :ad_request
 
-  after_commit :get_data_from_facebook
+  after_create :get_data_from_facebook
 
 
   def payload
@@ -14,24 +14,20 @@ class AdCampaign < ActiveRecord::Base
   end
 
 
-  def name
-    ad_request.name
-  end
-
-
   def action
-    "act_#{account_id}/campaigns"
+    "campaigns"
   end
 
 
   def self.create_for_ad_request(ad_request)
-    ad_campaign = create(ad_request_id: ad_request.id)
+    ad_campaign = create!(ad_request_id: ad_request.id, name: ad_request.name)
     ad_campaign
   end
 
 
   def get_data_from_facebook
-    FacebookAds::Base.
+    self.facebook_id = post_request['id']
+    self.save!
   end
 
 

@@ -12,9 +12,12 @@ ActiveAdmin.register AdRequest do
 #   permitted
 # end
 
+  permit_params :broker_uuid, :daily_amount
+
 
   form do |f|
     f.input :broker_uuid
+    f.input :daily_amount
     f.actions
   end
 

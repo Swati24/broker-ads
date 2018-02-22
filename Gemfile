@@ -34,11 +34,15 @@ gem 'activeadmin'
 # gem 'capistrano-rails', group: :development
 
 gem 'devise'
+gem 'dotenv-rails', require: 'dotenv/rails-now'
+gem 'rest-client'
+gem 'carrierwave', '~> 1.0'
 
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'annotate', git: 'https://github.com/ctran/annotate_models.git'
 end
 
 group :development do
